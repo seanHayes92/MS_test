@@ -1,0 +1,14 @@
+
+Notes: Runs on Python 3.10, straight out of the box, no need for any 3rd party modules.
+
+#SQLITE commands
+
+#Access the DB file
+sqlite3 exercise_database.db
+
+#Sample query to verify matchup
+
+PRAGMA foreign_keys = ON;
+
+select * from input_text_reference_table JOIN word_frequency_table on input_text_reference_table.id = word_frequency_table.text_body_id
+
