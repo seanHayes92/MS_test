@@ -67,7 +67,7 @@ def word_frequency_calculation(text_body):
 if __name__ == '__main__':
 
     """
-    - Reads a CSV (comma-separated values) file from a folder (see description and sample on page 2)
+    - Reads a CSV file from a folder 
     - Performs a word frequency count on the text in the “original_text” segment (the third segment)
     - The count should ignore a predefined set of common words (e.g. “a”, “the”, “then”, “and”,
     “an”, etc)
@@ -134,7 +134,7 @@ if __name__ == '__main__':
         print("Database populated, commiting changes")
 
         # Create a TOTAL table that aggregates all instances of words in the frequency table
-        # This segment was added in on the off chance a column-length word count was required
+        # This segment was added in on the off chance a column-length word frequency count was required
         cur.execute(f"""
         CREATE TABLE total_word_count AS SELECT word AS "word", SUM(count) AS "count" FROM {frequency_table}
         GROUP BY word;
