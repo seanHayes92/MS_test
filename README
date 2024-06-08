@@ -1,6 +1,10 @@
 
 Notes: Runs on Python 3.10, straight out of the box, no need for any 3rd party modules.
 
+Command: python3 ms_test/ms_exercise_1.py
+
+Extra script to reset the test (delete DB and move file back to input): python3 ms_test/test_reset.py
+
 #SQLITE commands
 
 #Access the DB file
@@ -9,6 +13,5 @@ sqlite3 exercise_database.db
 #Sample query to verify matchup
 
 PRAGMA foreign_keys = ON;
-
 select * from input_text_reference_table JOIN word_frequency_table on input_text_reference_table.id = word_frequency_table.text_body_id
 
